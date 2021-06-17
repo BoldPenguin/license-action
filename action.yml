@@ -1,0 +1,5 @@
+name: Licensed
+description: Check licenses against BPs rules
+runs:
+  using: docker
+  image: Dockerfile
