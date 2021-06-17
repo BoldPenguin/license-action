@@ -6,5 +6,6 @@ curl -fsS \
   -o .licensed.yml \
   -L https://api.github.com/repos/BoldPenguin/licensed-config/contents/default.yml
 
+licensed env
 licensed cache
 licensed status
