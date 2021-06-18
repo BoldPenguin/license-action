@@ -9,4 +9,7 @@ curl -fsS \
 # The absolute path will be different when running in Docker
 bundle config --local BUNDLE_PATH $PWD/vendor/bundle
 
+cat .bundle/config
+ls vendor/bundle/ruby/*/gems
+
 license_finder --decisions-file=dependency_decisions.yml
