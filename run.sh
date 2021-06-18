@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-license_finder --decisions-file=dependency_decisions.yml
+bundle exec license_finder --decisions-file=dependency_decisions.yml
