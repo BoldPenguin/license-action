@@ -1,3 +1,7 @@
 #!/bin/bash -e
 
-bundle install --system --gemfile=$GITHUB_ACTION_PATH/Gemfile
+if [ -f Gemfile.lock ]; then
+  bundle add license_finder --group=development
+else
+  gem install license_finder
+fi
