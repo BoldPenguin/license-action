@@ -1,4 +1,4 @@
-name: Licensed
+name: License
 description: Check licenses against BPs rules
 runs:
   using: docker
