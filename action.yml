@@ -1,5 +1,11 @@
 name: License
 description: Check licenses against BPs rules
 runs:
-  using: docker
-  image: Dockerfile
+  using: composite
+  steps:
+    - run: ${{ github.action_path }}/install.sh
+      shell: bash
+    - run: ${{ github.action_path }}/config.sh
+      shell: bash
+    - run: ${{ github.action_path }}/run.sh
+      shell: bash
