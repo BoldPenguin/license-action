@@ -7,13 +7,13 @@ curl -fsS \
   -L https://api.github.com/repos/BoldPenguin/licensed-config/contents/dependency_decisions.yml
 
 # The base ruby image sets this, which ignores local bundler configs
-unset BUNDLE_APP_CONFIG
+# unset BUNDLE_APP_CONFIG
 
-# The absolute path will be different when running in Docker
-bundle config --local path $PWD/vendor/bundle
+# # The absolute path will be different when running in Docker
+# bundle config --local path $PWD/vendor/bundle
 
-cat .bundle/config
-bundle config
-ls vendor/bundle/ruby/*/gems
+# cat .bundle/config
+# bundle config
+# ls vendor/bundle/ruby/*/gems
 
-bundle exec license_finder --decisions-file=dependency_decisions.yml
+license_finder -p --decisions-file=dependency_decisions.yml
