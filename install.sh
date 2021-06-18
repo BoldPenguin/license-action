@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-gem install license_finder
+bundle install --system --gemfile=$GITHUB_ACTION_PATH/Gemfile
