@@ -1,7 +1,12 @@
 #!/bin/bash -e
 
+CMD_PREFIX=""
+
 if [ -f Gemfile.lock ]; then
-  bundle exec license_finder --decisions-file=dependency_decisions.yml
-else
-  license_finder --decisions-file=dependency_decisions.yml
+  CMD_PREFIX="bundle _2.1.4_ exec"
+  # Bundler has an issue, need to run using an old version
+  # https://github.com/pivotal/LicenseFinder/issues/828
+  gem install bundler -v 2.1.4
 fi
+
+$CMD_PREFIX license_finder --decisions-file=dependency_decisions.yml
