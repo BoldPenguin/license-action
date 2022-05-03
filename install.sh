@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 if [ -f Gemfile.lock ]; then
   bundle config unset deployment
