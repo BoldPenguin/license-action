@@ -9,5 +9,6 @@ if [ -f Gemfile.lock ]; then
   gem install bundler -v 2.1.4
 fi
 
-cat Gemfile.lock
+pwd
+find . | grep Gemfile
 $CMD_PREFIX license_finder --recursive
