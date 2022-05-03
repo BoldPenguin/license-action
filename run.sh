@@ -9,4 +9,5 @@ if [ -f Gemfile.lock ]; then
   gem install bundler -v 2.1.4
 fi
 
+gem dependency sqlite3 --reverse-dependencies
 $CMD_PREFIX license_finder --recursive
