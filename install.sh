@@ -1,6 +1,8 @@
 #!/bin/bash -ex
 
 if [ -f Gemfile.lock ]; then
+  bundle config unset deployment
+  bundle add license_finder --group=development
   pwd
   echo "================================================================================"
   ls
@@ -9,8 +11,6 @@ if [ -f Gemfile.lock ]; then
   echo "================================================================================"
   ls vendor
   echo "================================================================================"
-  bundle config unset deployment
-  bundle add license_finder --group=development
 else
   gem install license_finder
 fi
