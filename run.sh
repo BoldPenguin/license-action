@@ -9,8 +9,8 @@ if [ -f Gemfile.lock ]; then
   gem install bundler -v 2.1.4
 fi
 
-echo "pwd: $(pwd)"
-echo "ls: $(ls)"
-echo "ls ..: $(ls ..)"
+# echo "pwd: $(pwd)"
+# echo "ls: $(ls)"
+# echo "ls ..: $(ls ..)"
 
 $CMD_PREFIX license_finder --recursive
