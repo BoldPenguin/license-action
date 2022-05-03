@@ -10,5 +10,6 @@ if [ -f Gemfile.lock ]; then
 fi
 
 pwd
-find . | grep Gemfile
+ls
+ls ..
 $CMD_PREFIX license_finder --recursive
