@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 if [ -f Gemfile.lock ]; then
   pwd
@@ -6,6 +6,8 @@ if [ -f Gemfile.lock ]; then
   ls
   echo "================================================================================"
   ls ..
+  echo "================================================================================"
+  ls vendor
   echo "================================================================================"
   bundle config unset deployment
   bundle add license_finder --group=development
