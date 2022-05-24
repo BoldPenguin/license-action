@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 CMD_PREFIX=""
+ARGS=""
 
 if [ -f Gemfile.lock ]; then
   CMD_PREFIX="bundle _2.1.4_ exec"
@@ -9,4 +10,8 @@ if [ -f Gemfile.lock ]; then
   gem install bundler -v 2.1.4
 fi
 
-$CMD_PREFIX license_finder
+if ! [ -z "$RECURSIVE" ]; then
+  ARGS="--recursive"
+fi
+
+$CMD_PREFIX license_finder $ARGS
