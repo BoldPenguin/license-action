@@ -3,7 +3,7 @@
 CMD_PREFIX=""
 ARGS=""
 
-if [ -f Gemfile.lock ]; then
+if [ "$GLOBAL_INSTALL" != "true" ] && [ -f Gemfile.lock ]; then
   CMD_PREFIX="bundle exec"
 fi
 
